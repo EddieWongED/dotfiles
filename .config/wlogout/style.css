@@ -1,0 +1,65 @@
+@import "macchiato.css";
+
+* {
+    background-image: none;
+    box-shadow: none;
+	font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: rgba(12, 12, 12, 0.7);
+}
+
+button {
+	border: 0px;
+	border-radius: 0;
+    color: @text;
+    background-color: @base;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: @overlay1;
+    outline-style: none;
+}
+
+#lock {
+    background-image: image(
+        url("./assets/lock.svg")
+    );
+}
+
+#logout {
+    background-image: image(
+        url("./assets/logout.svg")
+    );
+}
+
+#suspend {
+    background-image: image(
+        url("./assets/suspend.svg")
+    );
+}
+
+#hibernate {
+    background-image: image(
+        url("./assets/hibernate.svg")
+    );
+}
+
+#shutdown {
+    background-image: image(
+        url("./assets/shutdown.svg")
+    );
+}
+
+#reboot {
+    background-image: image(
+        url("./assets/reboot.svg")
+    );
+}
