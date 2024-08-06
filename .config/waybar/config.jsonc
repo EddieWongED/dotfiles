@@ -227,7 +227,7 @@
 
     "custom/power": {
         "tooltip": false,
-        "format": "",
+        "format": "  ",
         "on-click": "wlogout"
     },
 
