@@ -44,7 +44,7 @@ pacman -S iwd networkmanager
 
 ```bash
 pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper hypridle copyq swaync polkit-kde-agent
-paru -S wlogout
+paru -S wlogout hyprshot
 ```
 
 ## Browser

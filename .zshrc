@@ -10,6 +10,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+#env
+EDITOR=nano
+
 # ls
 alias ls="ls -a"
 
