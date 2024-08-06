@@ -10,8 +10,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# ls
+alias ls="ls -a"
+
 # Update grub
 alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 
 # Reload waybar
 alias reload-waybar="pkill waybar && hyprctl dispatch exec waybar"
+
+PATH=~/.console-ninja/.bin:$PATH
