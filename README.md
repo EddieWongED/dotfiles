@@ -43,7 +43,7 @@ pacman -S iwd networkmanager
 ## Compositor / Wayland / Hyprland
 
 ```bash
-pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland
+pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper
 paru -S wlogout
 ```
 
