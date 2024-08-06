@@ -20,3 +20,6 @@ alias update-grub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias reload-waybar="pkill waybar && hyprctl dispatch exec waybar"
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# fastfetch
+fastfetch

@@ -25,7 +25,7 @@ pacman -S intel-ucode lib32-nvidia-utils libva-nvidia-driver nvidia nvidia-setti
 ## Basic
 
 ```bash
-pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh stow sudo tree vim wget zsh
+pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh sudo tree vim wget zsh
 ```
 
 ## Audio
@@ -43,7 +43,7 @@ pacman -S iwd networkmanager
 ## Compositor / Wayland / Hyprland
 
 ```bash
-pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper
+pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper hypridle copyq swaync polkit-kde-agent
 paru -S wlogout
 ```
 
@@ -82,6 +82,12 @@ paru -S visual-studio-code-bin
 
 ```bash
 pacman -S python-pip
+```
+
+## Miscellaneous
+
+```bash
+pacman -S stow htop fastfetch
 ```
 
 # Syncing dotfiles
