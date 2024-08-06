@@ -1,0 +1,128 @@
+@import "macchiato.css";
+
+@define-color fg #F5F5F5;
+@define-color bg @base;
+@define-color font @text;
+@define-color warning @yellow;
+@define-color alert #F53C3C;
+@define-color activegreen #26A65B;
+@define-color highlight @blue;
+
+* {
+    min-height: 0;
+    font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: @bg;
+    border-radius: 7px;
+}
+
+window#waybar.empty {
+    opacity: 0.3;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px transparent;
+}
+
+#workspaces button {
+    color: @fg;
+    /*padding : 0px 5px; */
+}
+
+#workspaces button.urgent {
+    color: @alert;
+}
+#workspaces button.empty {
+    color: @font;
+}
+
+#workspaces button.active {
+    color: @highlight;
+}
+
+#clock,
+#battery,
+#cpu,
+#bluetooth,
+#memory,
+#disk,
+#temperature,
+#language,
+#backlight,
+#backlight-slider,
+#network,
+#pulseaudio,
+#wireplumber,
+#wireplumber,
+#custom-media,
+#taskbar,
+#tray,
+#tray menu,
+#tray > .needs-attention,
+#tray > .passive,
+#tray > .active,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#custom-power,
+#custom-arch,
+#custom-notification,
+#custom-separator,
+#custom-empty,
+#window,
+#mpd {
+    margin: 3px 3px;
+    padding-left: 2px;
+    padding-right: 5px;
+    color: @font;
+}
+
+#tray {
+    background-color: @font;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin: 5px;
+}
+
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted,
+#battery.critical:not(.charging) {
+    color: @alert;
+}
+
+#battery.warning:not(.charging) {
+    color: @warning;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @activegreen;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#bluetooth.connected {
+    color: @activegreen;
+}

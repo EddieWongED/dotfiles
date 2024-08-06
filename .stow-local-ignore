@@ -21,3 +21,6 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+
+.config/hypr/card
+.config/hypr/integrated-card
