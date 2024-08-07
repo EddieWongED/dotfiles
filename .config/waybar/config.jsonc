@@ -25,6 +25,7 @@
         // "network",
         // "cpu",
         // "disk",
+        "custom/media",
         "hyprland/language",
         "backlight",
         "pulseaudio",
@@ -43,7 +44,7 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 20,
+        "max-length": 18,
         "separate-outputs": true
     },
 
@@ -222,6 +223,24 @@
         "exec": "swaync-client -swb",
         "on-click": "swaync-client -t -sw",
         "escape": true
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 15,
+        "format-icons": {
+            "spotify": "",
+            "chromium": "🎜  ",
+            "chrome": "🎜  ",
+            "firefox": "🎜  ",
+            "default": "🎜"
+        },
+        "hide-empty-text": true,
+        "tooltip": true,
+        "exec": "python $HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
+        "tooltip-format": "{}",
+        "on-click": "playerctl play-pause"
     },
 
     "custom/power": {

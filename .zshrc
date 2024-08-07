@@ -29,3 +29,6 @@ PATH=~/.console-ninja/.bin:$PATH
 
 # fastfetch
 fastfetch
+
+# GPU
+alias test-gpu="__GL_SYNC_TO_VBLANK=0 vblank_mode=0 glxgears"

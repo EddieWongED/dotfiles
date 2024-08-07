@@ -88,6 +88,7 @@ pacman -S python-pip
 
 ```bash
 pacman -S stow htop fastfetch
+paru -S spotify
 ```
 
 # Syncing dotfiles
