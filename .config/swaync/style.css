@@ -14,8 +14,8 @@
 }
 
 .control-center {
-    margin: 10px;
     border-radius: 10px;
+    border: 2px solid @surface2;
 }
 
 .notification-row {
@@ -158,6 +158,7 @@
 }
 
 .widget-mpris-player {
+    /* padding: 5px 10px; */
     margin: 10px;
 }
 
