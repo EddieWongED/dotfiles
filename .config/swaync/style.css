@@ -1,0 +1,171 @@
+@import "macchiato.css";
+
+@define-color cc-bg @base;
+@define-color noti-bg @surface1;
+@define-color noti-bg-darker @surface0;
+@define-color noti-bg-hover @surface2;
+@define-color text-color-disabled rgb(150, 150, 150);
+@define-color alert #F53C3C;
+
+* {
+    font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
+    color: @text;
+    font-size: 14px;
+}
+
+.control-center {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.notification-row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.notification {
+    background: @cc-bg;
+    border-radius: 10px;
+}
+
+.notification-content {
+    background: @cc-bg;
+    border-radius: 10px;
+}
+
+.close-button {
+    background: @alert;
+    color: @text;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.notification-action,
+.notification-default-action {
+    border-radius: 10px;
+}
+
+.inline-reply {
+    margin-top: 8px;
+}
+
+.inline-reply-entry {
+    background: @noti-bg-darker;
+    caret-color: @text;
+    border-radius: 5px;
+}
+
+.inline-reply-button {
+    margin-left: 4px;
+    background: @noti-bg;
+    border-radius: 5px;
+}
+
+.inline-reply-button:disabled {
+    background: initial;
+    color: @text-color-disabled;
+    border: 1px solid transparent;
+}
+
+.inline-reply-button:hover {
+    background: @noti-bg-hover;
+}
+
+.image {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.time {
+    color: @subtext0;
+}
+
+.control-center-list {
+    background: transparent;
+}
+
+.control-center-list-placeholder {
+    opacity: 0.5;
+}
+
+.floating-notifications {
+    background: transparent;
+}
+
+.blank-window {
+    background: alpha(black, 0.1);
+}
+
+.notification-group-buttons > button {
+    color: @text;
+    background: @noti-bg-darker;
+    text-shadow: none;
+    box-shadow: none;
+}
+.widget-title {
+    color: #7aa2f7;
+    background: @noti-bg-darker;
+    padding: 5px 10px;
+    margin: 10px 10px 5px 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.widget-title > button {
+    font-size: 1rem;
+    text-shadow: none;
+    background: @noti-bg;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.widget-title > button:hover {
+    background: @alert;
+    color: @cc-bg;
+}
+
+.widget-dnd {
+    background: @noti-bg-darker;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    font-size: large;
+    color: #7aa2f7;
+}
+
+.widget-dnd > switch {
+    border-radius: 5px;
+    background: @overlay2;
+}
+
+.widget-dnd > switch:checked {
+    background: @alert;
+    border: 1px solid @alert;
+}
+
+.widget-dnd > switch slider,
+.widget-dnd > switch:checked slider {
+    background: @cc-bg;
+    border-radius: 5px;
+}
+
+.widget-mpris {
+    margin: 0px 0px;
+    border-radius: 5px;
+}
+
+.widget-mpris-player {
+    margin: 10px;
+}
+
+.widget-label {
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+.widget-mpris-title {
+    font-weight: 700;
+}
