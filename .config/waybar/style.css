@@ -91,10 +91,13 @@ button:hover {
 }
 
 #tray {
-    background-color: @font;
-    border-radius: 20px;
-    padding: 0px 10px;
-    margin: 5px;
+    background: @overlay2;
+    border-radius: 7px;
+    padding: 0px 7px;
+}
+
+#tray menu {
+    background: @bg;
 }
 
 #network.disconnected,
