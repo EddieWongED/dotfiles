@@ -98,8 +98,8 @@ sudo pacman -S fcitx5-chinese-addons libime fcitx5 fcitx5-table-extra fcitx5-con
 ## Miscellaneous
 
 ```bash
-pacman -S stow htop fastfetch discord
-paru -S spotify
+pacman -S stow htop fastfetch spotify-launcher
+paru -S discord_arch_electron
 ```
 
 # Syncing dotfiles
