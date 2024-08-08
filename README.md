@@ -2,6 +2,11 @@
 
 Stores the dotfiles and configs of my arch linux setup.
 
+# Setup
+
+-   Arch
+-   Hyprland
+
 # Dependencies
 
 ## Linux
@@ -84,10 +89,16 @@ paru -S visual-studio-code-bin
 pacman -S python-pip
 ```
 
+## Input Method
+
+```bash
+sudo pacman -S fcitx5-chinese-addons libime fcitx5 fcitx5-table-extra fcitx5-config-qt fcitx5-gtk gtk2 gtk3 gtk4
+```
+
 ## Miscellaneous
 
 ```bash
-pacman -S stow htop fastfetch
+pacman -S stow htop fastfetch discord
 paru -S spotify
 ```
 
@@ -98,4 +109,18 @@ cd ~
 git clone git@github.com:EddieWongED/dotfiles.git
 cd dotfiles
 stow .
+```
+
+# Setting up Input Methods
+
+Append the following into `/etc/security/pam_env.conf`
+
+```bash
+# Input Method
+GLFW_IM_MODULE          DEFAULT=fcitx
+INPUT_METHOD            DEFAULT=fcitx
+XMODIFIERS              DEFAULT=@im=fcitx
+IMSETTINGS_MODULE       DEFAULT=fcitx
+QT_IM_MODULE            DEFAULT=fcitx
+SDL_IM_MODULE           DEFAULT=fcitx
 ```
