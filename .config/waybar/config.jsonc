@@ -25,8 +25,8 @@
         // "network",
         // "cpu",
         // "disk",
-        "tray",
         "custom/media",
+        "tray",
         "backlight",
         "pulseaudio",
         "custom/notification",
@@ -186,6 +186,7 @@
     "custom/arch": {
         "format": "{icon}",
         "format-icons": "",
+        "on-click": "rofi -show drun",
         "tooltip": false
     },
 

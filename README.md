@@ -48,7 +48,7 @@ pacman -S iwd networkmanager
 ## Compositor / Wayland / Hyprland
 
 ```bash
-pacman -S hyprland qt5-wayland rofi waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper hypridle hyprlock copyq swaync polkit-kde-agent
+pacman -S hyprland qt5-wayland rofi-wayland waybar wl-clip-persist xdg-desktop-portal-hyprland hyprpaper hypridle hyprlock copyq swaync polkit-kde-agent
 paru -S wlogout hyprshot
 ```
 
