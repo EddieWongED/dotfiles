@@ -120,6 +120,7 @@
         "format-disconnected": "󰀦",
         "format-linked": "",
         "tooltip-format": "Local IP: {ipaddr} ({netmask})\nInterface: {ifname}\nBandwidth: {bandwidthTotalBytes:>3}",
+        "tooltip-format-wifi": "{essid} ({frequency}GHz)\nSignal Strength: {signalStrength}% ({signaldBm}dBm)\nLocal IP: {ipaddr} ({netmask})\nInterface: {ifname}\nBandwidth: {bandwidthTotalBytes:>3}",
         "on-click": "~/.config/rofi/scripts/wifi-menu.sh"
     },
 
