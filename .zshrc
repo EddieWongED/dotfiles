@@ -8,6 +8,7 @@ zstyle :compinstall filename '/home/eddie/.zshrc'
 
 autoload -Uz compinit
 compinit
+zstyle ':completion::complete:*' gain-privileges 1
 # End of lines added by compinstall
 
 #env

@@ -2,5 +2,4 @@ configuration {
     modes: "run,drun";
 }
 
-@theme "/dev/null"
-@theme "launcher.rasi"
+@theme "~/.config/rofi/theme/catppuccin.rasi"

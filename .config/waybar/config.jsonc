@@ -22,13 +22,13 @@
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
-        // "network",
         // "cpu",
         // "disk",
         "custom/media",
         "tray",
         "backlight",
         "pulseaudio",
+        "network",
         "custom/notification",
         "battery",
         "custom/power",
@@ -114,13 +114,13 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "interval": 1,
-        "format-wifi": "{bandwidthTotalBytes:>3}  ", //({essid} {signalStrength}%)
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format-wifi": "{ipaddr} ({signalStrength}%) ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "formapowert-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰀦", //Disconnected ⚠
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format": "󰀦",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "󰀦",
+        "format-linked": "",
+        "tooltip-format": "Local IP: {ipaddr} ({netmask})\nInterface: {ifname}\nBandwidth: {bandwidthTotalBytes:>3}",
+        "on-click": "~/.config/rofi/scripts/wifi-menu.sh"
     },
 
     "pulseaudio": {
@@ -186,7 +186,7 @@
     "custom/arch": {
         "format": "{icon}",
         "format-icons": "",
-        "on-click": "rofi -show drun",
+        "on-click": "rofi -show drun -theme ~/.config/rofi/launcher.rasi",
         "tooltip": false
     },
 

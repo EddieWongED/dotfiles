@@ -30,7 +30,7 @@ pacman -S intel-ucode lib32-nvidia-utils libva-nvidia-driver nvidia nvidia-setti
 ## Basic
 
 ```bash
-pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh sudo tree vim wget zsh
+pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh sudo tree vim wget zsh bc
 ```
 
 ## Audio

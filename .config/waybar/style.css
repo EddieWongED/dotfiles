@@ -91,7 +91,7 @@ button:hover {
 }
 
 #tray {
-    background: @overlay2;
+    background: @surface2;
     border-radius: 7px;
     padding: 0px 7px;
 }
