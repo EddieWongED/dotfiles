@@ -30,7 +30,14 @@ pacman -S intel-ucode lib32-nvidia-utils libva-nvidia-driver nvidia nvidia-setti
 ## Basic
 
 ```bash
-pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh sudo tree vim wget zsh bc
+pacman -S brightnessctl git less mesa-utils nano nano-syntax-highlighting openssh sudo tree vim wget zsh bc cmake make tmux fzf bat
+```
+
+## Terminal
+
+```bash
+pacman -S alacritty
+paru -S oh-my-posh
 ```
 
 ## Audio
@@ -86,7 +93,7 @@ paru -S visual-studio-code-bin
 ## Programming Language
 
 ```bash
-pacman -S python-pip
+pacman -S python-pip nodejs npm
 ```
 
 ## Input Method
