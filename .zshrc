@@ -21,7 +21,7 @@ bindkey "^[[1;5D" backward-word
 # zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-if [ ! -d "$ZINIT_HOME" ]; then
+if [ -x "$(command -v git)" ] && [ ! -d "$ZINIT_HOME" ]; then
     mkdir -p "$(dirname $ZINIT_HOME)"
     git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
@@ -44,6 +44,14 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color -a $realpath'
 # oh-my-posh
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.json)"
+fi
+
+# tmux plugin manager
+TPM_HOME="${HOME}/.tmux/plugins/tpm"
+
+if [ -x "$(command -v git)" ] && [ -x "$(command -v tmux)" ] && [ ! -d "$TPM_HOME" ]; then
+    mkdir -p "$(dirname $TPM_HOME)"
+    git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
 fi
 
 # bat
