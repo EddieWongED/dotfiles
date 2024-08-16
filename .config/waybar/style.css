@@ -103,6 +103,15 @@ button:hover {
     color: @font;
 }
 
+#custom-notification.notification,
+#custom-notification.dnd-notification,
+#custom-notification.inhibited-notification {
+    margin: 3px -2px 3px 4px;
+    padding-left: 0px;
+    padding-right: 5px;
+    color: @font;
+}
+
 #tray {
     background: @surface2;
     border-radius: 7px;
