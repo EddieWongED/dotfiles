@@ -27,7 +27,8 @@
         "custom/media",
         "tray",
         "backlight",
-        "pulseaudio",
+        "pulseaudio#output",
+        "pulseaudio#input",
         "network",
         "custom/notification",
         "battery",
@@ -124,12 +125,18 @@
         "on-click": "~/.config/rofi/scripts/wifi-menu.sh"
     },
 
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}", //{format_source}",
-        "format-muted": "{volume}% 󰖁",
-        "format-source": "{volume}% ",
+    "pulseaudio#input": {
+        "format": "{format_source}",
+        "format-source": "",
         "format-source-muted": "",
+        "reverse-scrolling": 1,
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-click-right": "pavucontrol --tab=4"
+    },
+
+    "pulseaudio#output": {
+        "format": "{volume}% {icon}",
+        "format-muted": "{volume}% 󰖁",
         "format-icons": {
             "headphone": "󰋋",
             "hands-free": "󱡒",
@@ -140,7 +147,9 @@
             "default": ["", "", ""]
         },
         "reverse-scrolling": 1,
-        "on-click": "pavucontrol"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol --tab=3",
+        "max-volume": 100
     },
 
     "wireplumber": {
