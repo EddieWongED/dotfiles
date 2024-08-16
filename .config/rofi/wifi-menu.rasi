@@ -41,7 +41,7 @@ window {
     location:                    3;
     anchor:                      west;
     fullscreen:                  false;
-    width:                       450px;
+    width:                       500px;
     height:                      100%;
     x-offset:                    0px;
     y-offset:                    0px;
