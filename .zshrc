@@ -12,6 +12,7 @@ setopt hist_find_no_dups
 
 # env
 EDITOR=nano
+XDG_CONFIG_HOME=~/.config
 
 # bind
 bindkey -e
