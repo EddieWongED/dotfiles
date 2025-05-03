@@ -22,38 +22,41 @@ bindkey "^[[1;5D" backward-word
 # zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
-if [ -x "$(command -v git)" ] && [ ! -d "$ZINIT_HOME" ]; then
-    mkdir -p "$(dirname $ZINIT_HOME)"
-    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+if [ -f "${ZINIT_HOME}/zinit.zsh" ]; then
+    source "${ZINIT_HOME}/zinit.zsh"
+
+    zinit light zsh-users/zsh-syntax-highlighting
+    zinit light zsh-users/zsh-completions
+    zinit light zsh-users/zsh-autosuggestions
+    zinit light Aloxaf/fzf-tab
+
+    # completion
+    autoload -Uz compinit && compinit
+
+    zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+    zstyle ':completion:*' menu no
+    zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color -a $realpath'
+else
+    echo "zinit is not found."
 fi
-
-source "${ZINIT_HOME}/zinit.zsh"
-
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
-# completion
-autoload -Uz compinit && compinit
-
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color -a $realpath'
 
 # oh-my-posh
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.json)"
+if which oh-my-posh > /dev/null 2>&1; then
+    eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/config.json)"
+else
+    echo "oh-my-posh is not found."
 fi
 
-# tmux plugin manager
-TPM_HOME="${HOME}/.tmux/plugins/tpm"
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-if [ -x "$(command -v git)" ] && [ -x "$(command -v tmux)" ] && [ ! -d "$TPM_HOME" ]; then
-    mkdir -p "$(dirname $TPM_HOME)"
-    git clone https://github.com/tmux-plugins/tpm "$TPM_HOME"
-fi
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 # bat
 alias cat="bat --color=always"
@@ -78,4 +81,3 @@ eval "$(fzf --zsh)"
 
 # fastfetch
 fastfetch
-
