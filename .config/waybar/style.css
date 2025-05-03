@@ -1,4 +1,4 @@
-@import "macchiato.css";
+@import "../styles/macchiato.css";
 
 @define-color fg #F5F5F5;
 @define-color bg @base;

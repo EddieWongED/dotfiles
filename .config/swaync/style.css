@@ -1,4 +1,4 @@
-@import "macchiato.css";
+@import "../styles/macchiato.css";
 
 @define-color cc-bg @base;
 @define-color noti-bg @surface1;

@@ -1,0 +1,57 @@
+@import "../../styles/macchiato.css";
+
+* {
+    font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
+    color: @text;
+}
+
+:root {
+    --border-color: @surface0;
+    --border-color-active: @text;
+    --bg-color: @base;
+    --bg-color-hover: @surface1;
+    --border-radius: 5px;
+    --border-size: 2px;
+}
+
+.monitor {
+  padding: 2px;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.monitor:hover {
+  background-color: var(--bg-color);
+}
+
+.monitor_active {
+  border: 0px;
+}
+
+.workspace {
+    border: 0px;
+}
+
+.workspace:hover {
+  background-color: var(--bg-color);
+}
+
+.client-image {
+    margin: 10px;
+}
+
+.client {
+}
+
+.client:hover {
+  background-color: var(--bg-color-hover);
+}
+
+.client_active {
+}
+
+.index {
+    font-size: 14px;
+    border: 0px;
+    background: transparent;
+}
